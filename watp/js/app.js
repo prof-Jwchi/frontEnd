@@ -16,7 +16,7 @@ function getRandomPresentationOrder(people) {
 // 버튼 클릭 이벤트에 연결
 const btn = document.getElementById("buttonId");
 const result1 = document.getElementById("result1");
-const result2 = document.getElementById("result2");
+//const result2 = document.getElementById("result2");
 
 btn.addEventListener("click", function () {
   // 모든 학생의 랜덤 발표 순서 생성
@@ -29,5 +29,5 @@ btn.addEventListener("click", function () {
   
   // 결과 표시 (첫 번째 결과 영역에만 표시)
   result1.innerHTML = formattedOrder;
-  result2.innerHTML = ""; // 두 번째 결과 영역은 비움
+  //result2.innerHTML = ""; // 두 번째 결과 영역은 비움
 });
