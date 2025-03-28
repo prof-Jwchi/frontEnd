@@ -1,4 +1,3 @@
-
 // 학생들의 랜덤 발표 순서를 정하는 함수
 function getRandomPresentationOrder(people) {
   // 원본 배열을 수정하지 않기 위해 복사본 생성
@@ -16,9 +15,12 @@ function getRandomPresentationOrder(people) {
 // 버튼 클릭 이벤트에 연결
 const btn = document.getElementById("buttonId");
 const result1 = document.getElementById("result1");
-//const result2 = document.getElementById("result2");
 
 btn.addEventListener("click", function () {
+  // student.js에서 정의된 people 배열이 제대로 로드되었는지 확인
+  console.log("현재 people 배열:", people);
+  console.log("people 배열 길이:", people.length);
+  
   // 모든 학생의 랜덤 발표 순서 생성
   const presentationOrder = getRandomPresentationOrder(people);
   
@@ -29,5 +31,4 @@ btn.addEventListener("click", function () {
   
   // 결과 표시 (첫 번째 결과 영역에만 표시)
   result1.innerHTML = formattedOrder;
-  //result2.innerHTML = ""; // 두 번째 결과 영역은 비움
 });
